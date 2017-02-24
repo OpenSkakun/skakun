@@ -1,0 +1,13 @@
+{
+    "name": "skakun",
+    "version": "0.0.1",
+    "authors": [
+        "Piotr Dobrysiak <piotr.dobrysiak@gmail.com>"
+    ],
+    "description": "Skakun for net devices",
+    "license": "MIT",
+    "ignore": [],
+    "dependencies": {
+        "bootstrap": "latest"
+    }
+}
