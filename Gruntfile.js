@@ -5,6 +5,7 @@ module.exports = function (grunt) {
         shell: {
             multiple: {
                 command: ['bower install',
+                    'rm -r public',
                     'mkdir public',
                     'mv bower_components/** public/',
                     'rm -rf bower_components'].join('&&')
