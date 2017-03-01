@@ -1,0 +1,22 @@
+{% extends "base.j2" %}
+
+{% block menu %}
+    {% include "navbar.html" with active='lan' %}
+{% endblock menu %}
+
+{% block content %}
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1><i class="demo-icon icon-telephone blue"></i> Navbar example</h1>
+        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It
+            includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+        <p>
+            <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
+        </p>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" with active='lan' %}
+{% endblock footer %}

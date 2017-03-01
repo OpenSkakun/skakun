@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+    <title>Demo</title>
+    <link rel="stylesheet" href="{% static 'css/skakun.css' %}" type="text/css" charset="utf-8">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
+
+</head>
+
+<body>
+
+{% block menu %}
+{% endblock menu %}
+
+<div class="container">
+    {% block content %}
+    {% endblock content %}
+
+
+</div> <!-- /container -->
+{% block footer %}
+{% endblock footer %}
+<!-- Core JavaScript -->
+<script>window.jQuery || document.write('<script src="/static/js/skakun.js"><\/script>')</script>
+<script src="{% static 'js/skakun.js' %}"></script>
+</body>
+</html>
