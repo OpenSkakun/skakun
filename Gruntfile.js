@@ -28,6 +28,7 @@ module.exports = function (grunt) {
             target: {
                 files: {
                     'webapp/static/skakun.css': [
+                        'webapp/templates/web/css/fontello-embedded.css',
                         'bower_components/bootstrap/dist/css/bootstrap.css'
                     ]
                 }

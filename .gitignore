@@ -1,9 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
-### Python template
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *$py.class
-
 # C extensions
 *.so
 
@@ -13,3 +12,4 @@ node_modules/
 bower_components
 migrations/
 static/
+
