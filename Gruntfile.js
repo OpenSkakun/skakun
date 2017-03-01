@@ -12,24 +12,44 @@ module.exports = function (grunt) {
 //            }
         shell: {
             multiple: {
-                command: ['bower install',
-                    // 'rm -r public',
-                    // 'mkdir public'
-//                    'mv bower_components/** public/'
-//                    'rm -rf bower_components'
+                command: ['bower install'
                 ].join('&&')
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    'webapp/static/js/skakun.js': [
+                        'bower_components/jquery/dist/jquery.js',
+                        'bower_components/bootstrap/dist/js/bootstrap.js'
+                    ]
+                }
+            },
+            options: {
+                sourceMap: true,
+                sourceMapIn: 'bower_components/jquery/dist/jquery.min.map'
             }
         },
         cssmin: {
             options: {
-                mergeIntoShorthands: false,
-                roundingPrecision: -1
+                mergeIntoShorthands: true,
+                roundingPrecision: -1,
+                sourceMap: true,
+                sourceMapIn: 'bower_components/bootstrap/dist/css/bootstrap.css.map'
             },
             target: {
                 files: {
-                    'webapp/static/skakun.css': [
+                    'webapp/static/css/skakun.css': [
+                        'bower_components/bootstrap/dist/css/bootstrap.css',
                         'webapp/templates/web/css/fontello-embedded.css',
-                        'bower_components/bootstrap/dist/css/bootstrap.css'
+                        'webapp/templates/web/css/sticky-footer-navbar.css'
+                    ]
+                }
+            },
+            map: {
+                files: {
+                    'webapp/static/skakun.css.map': [
+                        'bower_components/bootstrap/dist/css/bootstrap.css.map'
                     ]
                 }
             }
@@ -37,10 +57,11 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     //Default Tasks
-    grunt.registerTask('default', ['shell', 'cssmin']);
+    grunt.registerTask('default', ['shell', 'cssmin', 'uglify']);
 
     //production Tasks
     //grunt.registerTask('dist',[..]);
