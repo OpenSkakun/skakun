@@ -13,8 +13,8 @@ module.exports = function (grunt) {
         shell: {
             multiple: {
                 command: ['bower install',
-                    'rm -r public',
-                    'mkdir public'
+                    // 'rm -r public',
+                    // 'mkdir public'
 //                    'mv bower_components/** public/'
 //                    'rm -rf bower_components'
                 ].join('&&')
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'output.css': [
+                    'webapp/static/skakun.css': [
                         'bower_components/bootstrap/dist/css/bootstrap.css'
                     ]
                 }
