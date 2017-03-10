@@ -20,9 +20,10 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'webapp/static/js/skakun.js': [
-                        'bower_components/jquery/dist/jquery.js',
                         'bower_components/bootstrap/dist/js/bootstrap.js'
-                    ]
+                    ],
+                    'webapp/static/js/jquery.min.js': 'bower_components/jquery/dist/jquery.js',
+                    'webapp/static/js/bootstrap.min.js': 'bower_components/bootstrap/dist/js/bootstrap.js'
                 }
             },
             options: {
